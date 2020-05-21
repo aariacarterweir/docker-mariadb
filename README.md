@@ -1,5 +1,7 @@
 # docker-mariadb
 
+Version 1.0.0
+
 Make sure you have terminal open in this directory and:
 
 - run `sh run.sh` to boot up, this will also print the IP of your local mariadb server
