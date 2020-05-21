@@ -9,8 +9,9 @@ fi
 # docker run command
 docker run \
   --detach \
-  --tty \
-  --mount  type=bind,source="$(pwd)/persist/",target=/app/persist \
+  --mount  type=bind,source="$(pwd)/persist/",target=/persist \
   --env-file .env \
-  --name "docker-mariadb" \
-  mariadb/server:latest
+  --name mariadb \
+  aariacarterweir/mariadb-server
+
+sh get-ip.sh
