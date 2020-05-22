@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Load config
-. load-config.sh
+. util/load-config.sh
 
 # EXAMPLE USAGE
 # sh build.sh -v 1.0.11 -p

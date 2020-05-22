@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Load config
-. load-config.sh
+. util/load-config.sh
 
 echo "Stopping container:"
 docker container stop "$CONTAINER_NAME"

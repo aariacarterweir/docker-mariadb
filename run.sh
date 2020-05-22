@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Load config
-. load-config.sh
+. util/load-config.sh
 
 # ensure global shared directories exist
 if [ ! -d "shared/mysql" ]; then
