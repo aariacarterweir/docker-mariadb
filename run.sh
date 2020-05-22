@@ -11,9 +11,10 @@ fi
 # docker run command
 docker run \
   --detach \
-  --mount  type=bind,source="$(pwd)/persist/",target=/persist \
+  --mount  type=bind,source="$(pwd)/persist/",target=/var/lib/mysql \
   --env-file config.txt \
   --name "$CONTAINER_NAME" \
+  -p "$LOCAL_PORT":"$CONTAINER_PORT" \
   "$IMAGE_NAME"
 
 sh get-ip.sh
