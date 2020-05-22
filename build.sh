@@ -1,11 +1,10 @@
 #!/bin/sh
 
+# LOAD CONFIG
+. config.txt
+
 # EXAMPLE USAGE
 # sh build.sh -v 1.0.11 -p
-
-# CONFIG
-IMAGE_NAME="aariacarterweir/mariadb-server"
-LATEST_TAG="latest"
 
 # PARSE ARGS
 while getopts pv: option
@@ -31,6 +30,3 @@ if [ "$PUSH" ]; then
         docker push "${IMAGE_NAME}:${VERSION}"
     fi
 fi
-
-# CLEAN UP
-docker system prune --force

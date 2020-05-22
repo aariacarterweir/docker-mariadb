@@ -1,3 +1,5 @@
 #!/bin/sh
 
-docker exec -it mariadb sh
+. config.txt
+
+docker exec -it "$CONTAINER_NAME" sh

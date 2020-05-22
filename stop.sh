@@ -1,4 +1,8 @@
 #!/bin/sh
 
-docker container stop mariadb
-docker system prune --force
+. config.txt
+
+echo "Stopping container:"
+docker container stop "$CONTAINER_NAME"
+echo "Removing container:"
+docker rm "$CONTAINER_NAME"

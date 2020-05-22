@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. config.txt
+
 # ensure global persist directory exists
 if [ ! -d "persist" ]; then
   mkdir persist
@@ -10,8 +12,8 @@ fi
 docker run \
   --detach \
   --mount  type=bind,source="$(pwd)/persist/",target=/persist \
-  --env-file .env \
-  --name mariadb \
-  aariacarterweir/mariadb-server
+  --env-file config.txt \
+  --name "$CONTAINER_NAME" \
+  "$IMAGE_NAME"
 
 sh get-ip.sh
