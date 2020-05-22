@@ -1,6 +1,7 @@
 #!/bin/sh
 
-. config.txt
+# Load config
+. load-config.sh
 
 # ensure global persist directory exists
 if [ ! -d "persist" ]; then
@@ -16,5 +17,3 @@ docker run \
   --name "$CONTAINER_NAME" \
   -p "$LOCAL_PORT":"$CONTAINER_PORT" \
   "$IMAGE_NAME"
-
-sh get-ip.sh

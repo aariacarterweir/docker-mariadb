@@ -1,5 +1,6 @@
 #!/bin/sh
 
-. config.txt
+# Load config
+. load-config.sh
 
 docker exec -it "$CONTAINER_NAME" sh
