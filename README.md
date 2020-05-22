@@ -1,6 +1,6 @@
 # docker-mariadb
 
-Version 1.1.0
+Version 1.2.0
 
 Make sure you have terminal open in this directory and:
 
