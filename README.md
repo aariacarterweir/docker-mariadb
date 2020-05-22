@@ -4,7 +4,8 @@ Version 1.2.0
 
 Make sure you have terminal open in this directory and:
 
-- run `sh run.sh` to boot up
+- run `sh run.sh` to boot up for the first time (or after you run "stop")
+- run `sh start.sh` to start up a container, after say - your computer has been rebooted
 - run `sh stop.sh` to stop
 - run `sh exec.sh` to open a shell on the mariadb server 
 
